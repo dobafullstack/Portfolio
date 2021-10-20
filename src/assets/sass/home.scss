@@ -1,0 +1,72 @@
+@import "./variable.scss";
+
+.home-wrapper {
+    height: calc(100vh );
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        margin-top: 1rem;
+        padding: 0 10rem;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            color: $primary-color;
+            i {
+                margin-left: 1rem;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .body {
+        padding-left: 2rem;
+        padding-right: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            flex-grow: 8;
+             h2{
+                 margin: 0;
+                 font-size: 70px;
+                 font-size: Spartan;
+                 font-weight: 400;
+             }
+
+             h1{
+                 margin: 0;
+                 font-family: $primary-font;
+                 font-size: 150px;
+                 font-weight: 400;
+             }
+
+             p{
+                 @include text-sub;
+                 font-size: 40px;
+             }
+
+             .button-wrapper{
+                 @include button-wrapper;
+             }
+        }
+
+        .right-side {
+            flex-grow: 4;
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 500px;
+                height: 500px;
+                border-radius: 100%;
+            }
+        }
+    }
+}

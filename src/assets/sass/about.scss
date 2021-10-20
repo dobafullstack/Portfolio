@@ -1,0 +1,52 @@
+@import "./variable.scss";
+
+.about-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .main {
+        width: 2048px;
+        height: 965px;
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+        box-shadow: 2px -2px 10px rgba($color: #000000, $alpha: 0.5);
+        border: 1px solid gray;
+        .left-side {
+            img {
+                height: 965px;
+            }
+        }
+
+        .right-side {
+            p {
+                font-size: 40px;
+            }
+
+            ul.list-highlight {
+                list-style: none;
+
+                li {
+                    .circle {
+                        margin-right: 1rem;
+                    }
+
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    font-size: 33px;
+                }
+            }
+
+            .button-wrapper {
+                @include button-wrapper;
+                margin-top: 5rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

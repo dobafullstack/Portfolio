@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Moderan";
+    src: url("../fonts/Moderan.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI Bold Italic";
+    src: url("../fonts/Segoe UI Bold Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("../fonts/Segoe UI Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI Italic";
+    src: url("../fonts/Segoe UI Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI";
+    src: url("../fonts/Segoe UI.ttf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400&display=swap");
+
+$primary-font: Moderan;
+$second-font: Segoe UI;
+$primary-color: #000;
+$second-color: #fff;
+$third-color: #cb0606;
+
+@mixin main-font {
+    font-family: $primary-font;
+}
+
+@mixin text-light {
+    font-family: $second-font;
+    font-weight: 400;
+}
+
+@mixin text-sub {
+    font-family: $second-font;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+@mixin button-wrapper {
+    a {
+        border: none;
+        outline: none;
+        padding: 1rem 2rem;
+        border-radius: 100px;
+        font-family: $primary-font;
+        font-size: 40px;
+        color: white;
+        text-decoration: none;
+    }
+
+    a.hire {
+        margin-right: 1rem;
+        background-color: $primary-color;
+    }
+
+    a.resume {
+        background-color: $third-color;
+    }
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: $third-color;
+    border: none;
+    border-radius: 100%;
+}

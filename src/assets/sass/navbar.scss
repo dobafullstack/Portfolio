@@ -1,0 +1,31 @@
+@import "./variable.scss";
+
+.navbar-wrapper {
+    height: 100px;
+    background-color: $primary-color;
+    color: $second-color;
+    font-family: $primary-font;
+    border-radius: 250px 0 250px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20rem;
+
+    h1{
+        font-size: 60px;
+    }
+
+    a {
+        color: white !important;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    .menu {
+        a.item {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
+    }
+}

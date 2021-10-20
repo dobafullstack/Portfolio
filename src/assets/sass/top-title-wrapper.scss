@@ -1,0 +1,18 @@
+@import "./variable.scss";
+
+.top-title-wrapper {
+    text-align: center;
+
+    h1 {
+        font-size: 100px;
+        font-family: $primary-font;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    p {
+        @include text-sub;
+        font-size: 40px;
+        margin: 0;
+    }
+}

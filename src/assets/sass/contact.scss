@@ -1,0 +1,89 @@
+@import "./variable.scss";
+
+.contact-wrapper {
+    background-color: $primary-color;
+    height: 100vh;
+    margin-top: 3.4rem;
+    position: relative;
+    z-index: 1;
+
+    .ellipse {
+        position: absolute;
+        right: -120px;
+        top: -300px;
+        width: 60%;
+        height: 100%;
+        background-color: $second-color;
+        transform: rotate(-45deg);
+        z-index: -1;
+        border-radius: 100% 0 100% 100%;
+    }
+
+    .form-contact {
+        position: absolute;
+        display: block;
+        right: 20%;
+        top: 10%;
+        min-width: 480px;
+
+        h1 {
+            text-align: left;
+            font-family: $primary-font;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5rem;
+            align-items: flex-start;
+
+            input, textarea{
+                width: 100%;
+                margin-bottom: 1.5rem;
+                padding: 0.5rem 2rem;
+                border-radius: 10px;
+                outline: none;
+                border: 0.5px solid #d8d8d8;
+            }
+
+            button{
+                background-color: $primary-color;
+                border: none;
+                outline: none;
+                color: $second-color;
+                padding: 0.5rem 1.5rem;
+                border-radius: 10px;
+                font-family: $second-font;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .text-wrapper{
+        color: $second-color;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h1{
+            font-family: $primary-font;
+            font-size: 100px;
+            margin-bottom: 5rem;
+        }
+
+        .contact-item{
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            i{
+                margin-right: 1rem;
+            }
+
+            p{
+                max-width: 300px;
+            }
+        }
+    }
+}
