@@ -1,0 +1,28 @@
+@mixin interest {
+    .interest {
+        padding: 0 10rem;
+
+        .interest-item {
+            margin-bottom: 5rem;
+            .header {
+                .circle {
+                    margin-right: 1rem;
+                }
+
+                span {
+                    font-family: $second-font;
+                    font-weight: bold;
+                    color: $third-color;
+                    font-size: 35px;
+                }
+            }
+
+            .content {
+                @include text-sub;
+                font-size: 1.5rem;
+                font-family: $second-font;
+                margin-left: calc(20px + 1rem);
+            }
+        }
+    }
+}

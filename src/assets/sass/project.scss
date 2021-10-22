@@ -1,0 +1,50 @@
+@mixin project {
+    .project {
+        padding: 0 10rem;
+
+        .project-item {
+            margin-bottom: 5rem;
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .circle {
+                    margin-right: 1rem;
+                }
+
+                span {
+                    font-family: $second-font;
+                    font-weight: bold;
+                    color: $third-color;
+                    font-size: 35px;
+                }
+
+                .time {
+                    background-color: $third-color;
+                    color: $second-color;
+                    padding: 0.5rem 1rem;
+                    border-radius: 100px;
+                    font-weight: bold;
+                    font-family: $second-font;
+                }
+            }
+
+            p {
+                margin: 0;
+                margin-left: calc(20px + 1rem);
+            }
+
+            .sub-title {
+                font-family: $second-font;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            .content {
+                @include text-sub;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

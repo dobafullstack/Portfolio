@@ -1,0 +1,41 @@
+@mixin skill {
+    .skill {
+        padding: 0 10rem;
+
+        .skill-item {
+            margin-bottom: 5rem;
+            .header {
+                display: flex;
+                align-items: center;
+
+                .circle {
+                    margin-right: 1rem;
+                }
+
+                span {
+                    font-family: $second-font;
+                    font-weight: bold;
+                    color: $third-color;
+                    font-size: 35px;
+                }
+            }
+
+            .process {
+                width: 400px;
+                height: 15px;
+                margin-top: 1rem;
+                margin-left: calc(20px + 1rem);
+                display: flex;
+                box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+
+                .percent {
+                    background-color: $primary-color;
+                }
+
+                .rest {
+                    background-color: $third-color;
+                }
+            }
+        }
+    }
+}

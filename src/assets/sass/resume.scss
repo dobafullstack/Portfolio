@@ -1,4 +1,10 @@
 @import "./variable.scss";
+@import "./sidebar.scss";
+@import "./education.scss";
+@import "./experience.scss";
+@import "./skill.scss";
+@import "./project.scss";
+@import "./interest.scss";
 
 .resume-wrapper {
     padding: 0 20rem;
@@ -8,57 +14,11 @@
 
     .resume {
         display: flex;
-        width: 2048px;
+        width: 100%;
         height: 1044px;
+        z-index: 9999;
 
-        .sidebar-wrapper {
-            width: 544.2px;
-            box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
-            position: relative;
-
-            .left-side {
-                display: flex;
-                flex-direction: column;
-                background-color: $primary-color;
-                align-items: center;
-                color: $second-color;
-                height: 100%;
-                width: 130px;
-            }
-
-            .item-wrapper {
-                position: absolute;
-                left: calc(130px / 2);
-                top: 5rem;
-
-                .item {
-                    display: flex;
-                    align-items: center;
-                    i {
-                        color: $second-color;
-                        font-size: 2rem;
-                        transform: translateX(-50%);
-                    }
-
-                    p {
-                        width: 420px !important;
-                        font-family: $second-font;
-                        font-size: 1.6rem;
-                        padding: 1rem 10rem 1rem 4rem;
-                        cursor: pointer;
-                        border-radius: 0 50px 50px 0;
-                        transition: background-color 0.6s ease;
-                    }
-                }
-
-                .item.active {
-                    p {
-                        background-color: $primary-color;
-                        color: $second-color;
-                    }
-                }
-            }
-        }
+        @include sidebar-wrapper;
 
         .right-side {
             flex-grow: 1;
@@ -69,206 +29,21 @@
                 height: 100%;
             }
 
-            .education {
-                h1 {
-                    text-align: center;
-                    font-size: 60px;
-                    font-family: $second-font;
-                    font-weight: bold;
-                }
+            @include education;
+            @include experience;
+            @include skill;
+            @include project;
+            @include interest;
+        }
 
-                .item-wrapper {
-                    padding-left: 10rem;
-                    padding-right: 10rem;
+        .right-side::-webkit-scrollbar {
+            background-color: white;
+            width: 5px;
+        }
 
-                    .item {
-                        .head-wrapper {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            .item-head {
-                                display: flex;
-                                align-items: center;
-
-                                .circle {
-                                    margin-right: 1rem;
-                                }
-
-                                p {
-                                    font-family: $second-font;
-                                    font-weight: bold;
-                                    color: $third-color;
-                                    font-size: 35px;
-                                }
-                            }
-
-                            .time {
-                                background-color: $third-color;
-                                color: $second-color;
-                                padding: 0.5rem 1rem;
-                                border-radius: 100px;
-                                font-weight: bold;
-                                font-family: $second-font;
-                            }
-                        }
-
-                        p.info {
-                            @include text-sub;
-                            margin: 0;
-                            margin-left: calc(20px + 1rem);
-                            font-size: 40px;
-                            font-family: $second-font;
-                            font-weight: 300;
-                            max-width: 600px;
-                        }
-                    }
-                }
-            }
-
-            .experience {
-                padding: 0 10rem;
-
-                h1 {
-                    text-align: center;
-                    font-size: 60px;
-                    font-family: $second-font;
-                    font-weight: bold;
-                }
-
-                .item-head {
-                    display: flex;
-                    align-items: center;
-
-                    .circle {
-                        margin-right: 1rem;
-                    }
-
-                    p {
-                        font-family: $second-font;
-                        font-weight: bold;
-                        color: $third-color;
-                        font-size: 35px;
-                    }
-                }
-            }
-
-            .skill {
-                padding: 0 10rem;
-
-                .skill-item {
-                    margin-bottom: 5rem;
-                    .header {
-                        display: flex;
-                        align-items: center;
-
-                        .circle {
-                            margin-right: 1rem;
-                        }
-
-                        span {
-                            font-family: $second-font;
-                            font-weight: bold;
-                            color: $third-color;
-                            font-size: 35px;
-                        }
-                    }
-
-                    .process {
-                        width: 400px;
-                        height: 15px;
-                        margin-top: 1rem;
-                        margin-left: calc(20px + 1rem);
-                        display: flex;
-                        box-shadow: 1px 1px 4px
-                            rgba($color: #000000, $alpha: 0.5);
-
-                        .percent {
-                            background-color: $primary-color;
-                        }
-
-                        .rest {
-                            background-color: $third-color;
-                        }
-                    }
-                }
-            }
-
-            .project {
-                padding: 0 10rem;
-
-                .project-item {
-                    margin-bottom: 5rem;
-                    .header {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        .circle {
-                            margin-right: 1rem;
-                        }
-
-                        span {
-                            font-family: $second-font;
-                            font-weight: bold;
-                            color: $third-color;
-                            font-size: 35px;
-                        }
-
-                        .time {
-                            background-color: $third-color;
-                            color: $second-color;
-                            padding: 0.5rem 1rem;
-                            border-radius: 100px;
-                            font-weight: bold;
-                            font-family: $second-font;
-                        }
-                    }
-
-                    p {
-                        margin: 0;
-                        margin-left: calc(20px + 1rem);
-                    }
-
-                    .sub-title {
-                        font-family: $second-font;
-                        font-weight: bold;
-                        font-size: 1.5rem;
-                    }
-
-                    .content {
-                        @include text-sub;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-
-            .interest {
-                padding: 0 10rem;
-
-                .interest-item {
-                    margin-bottom: 5rem;
-                    .header {
-                        .circle {
-                            margin-right: 1rem;
-                        }
-
-                        span {
-                            font-family: $second-font;
-                            font-weight: bold;
-                            color: $third-color;
-                            font-size: 35px;
-                        }
-                    }
-
-                    .content {
-                        @include text-sub;
-                        font-size: 1.5rem;
-                        font-family: $second-font;
-                        margin-left: calc(20px + 1rem)
-                    }
-                }
-            }
+        .right-side::-webkit-scrollbar-thumb {
+            background-color: #d8d8d8;
+            border-radius: 10px;
         }
     }
 }

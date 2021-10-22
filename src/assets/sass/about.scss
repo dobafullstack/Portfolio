@@ -50,3 +50,105 @@
         }
     }
 }
+
+.about-wrapper {
+    @include breakpoint($large) {
+        .main {
+            width: calc(1920px * 0.8);
+            height: 700px;
+
+            .left-side {
+                img {
+                    height: 100%;
+                }
+            }
+
+            .right-side {
+                p {
+                    font-size: 30px;
+                }
+
+                ul.list-highlight {
+                    li {
+                        font-size: 25px;
+                    }
+                }
+
+                .button-wrapper {
+                    a {
+                        font-size: 25px;
+                        padding: 0.6rem 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint($medium) {
+        .main {
+            width: calc(1024px * 0.9);
+            height: 500px;
+
+            .right-side {
+                p {
+                    font-size: 20px;
+                }
+
+                ul.list-highlight {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+
+                .button-wrapper {
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint($small) {
+        .main {
+            width: calc(768px * 0.8);
+            flex-direction: column;
+            height: auto;
+            padding-bottom: 1rem;
+
+            .left-side {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .right-side {
+                padding: 0 1rem;
+            }
+        }
+    }
+    @include breakpoint($x-small) {
+        .main {
+            width: calc(375px * 0.8);
+
+            .right-side {
+                p {
+                    font-size: 15px;
+                }
+
+                ul.list-highlight {
+                    li {
+                        font-size: 16px;
+                    }
+                }
+
+                .button-wrapper {
+                    margin-top: 2rem;
+
+                    a {
+                        font-size: 15px;
+                        padding: 0.4rem 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

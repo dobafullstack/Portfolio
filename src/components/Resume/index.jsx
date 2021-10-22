@@ -39,7 +39,7 @@ export default function Resume() {
                 setSelected("interest");
             }
         });
-    }, [ref]);
+    }, []);
 
     return (
         <div className='resume-wrapper' id='resume'>

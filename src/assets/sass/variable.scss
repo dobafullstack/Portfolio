@@ -27,6 +27,18 @@ $primary-color: #000;
 $second-color: #fff;
 $third-color: #cb0606;
 
+//Breakpoint
+$large: 1920px;
+$medium: 1024px;
+$small: 768px;
+$x-small: 375px;
+
+@mixin breakpoint($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
 @mixin main-font {
     font-family: $primary-font;
 }
@@ -70,4 +82,13 @@ $third-color: #cb0606;
     background-color: $third-color;
     border: none;
     border-radius: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f8f8f8;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
 }

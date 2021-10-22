@@ -1,0 +1,28 @@
+@mixin experience {
+    .experience {
+        padding: 0 10rem;
+
+        h1 {
+            text-align: center;
+            font-size: 60px;
+            font-family: $second-font;
+            font-weight: bold;
+        }
+
+        .item-head {
+            display: flex;
+            align-items: center;
+
+            .circle {
+                margin-right: 1rem;
+            }
+
+            p {
+                font-family: $second-font;
+                font-weight: bold;
+                color: $third-color;
+                font-size: 35px;
+            }
+        }
+    }
+}

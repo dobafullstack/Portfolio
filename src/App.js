@@ -15,7 +15,7 @@ function App() {
             <Home />
             <About />
             <Resume />
-            <Contact />
+            {/* <Contact /> */}
 
             <ToastContainer
                 position='bottom-left'

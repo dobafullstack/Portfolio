@@ -1,7 +1,7 @@
 @import "./variable.scss";
 
 .home-wrapper {
-    height: calc(100vh );
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
 
@@ -34,28 +34,28 @@
             align-items: center;
 
             flex-grow: 8;
-             h2{
-                 margin: 0;
-                 font-size: 70px;
-                 font-size: Spartan;
-                 font-weight: 400;
-             }
+            h2 {
+                margin: 0;
+                font-size: 70px;
+                font-size: Spartan;
+                font-weight: 400;
+            }
 
-             h1{
-                 margin: 0;
-                 font-family: $primary-font;
-                 font-size: 150px;
-                 font-weight: 400;
-             }
+            h1 {
+                margin: 0;
+                font-family: $primary-font;
+                font-size: 150px;
+                font-weight: 400;
+            }
 
-             p{
-                 @include text-sub;
-                 font-size: 40px;
-             }
+            p {
+                @include text-sub;
+                font-size: 40px;
+            }
 
-             .button-wrapper{
-                 @include button-wrapper;
-             }
+            .button-wrapper {
+                @include button-wrapper;
+            }
         }
 
         .right-side {
@@ -66,6 +66,169 @@
                 width: 500px;
                 height: 500px;
                 border-radius: 100%;
+            }
+        }
+    }
+}
+
+.home-wrapper {
+    @include breakpoint($large) {
+        .body {
+            padding: 0 10rem;
+
+            .left-side {
+                h2 {
+                    font-size: 50px;
+                }
+
+                h1 {
+                    font-size: 100px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .button-wrapper {
+                    margin-top: 2rem;
+
+                    a {
+                        font-size: 25px;
+                    }
+                }
+            }
+
+            .right-side {
+                img {
+                    height: 400px;
+                    width: 400px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint($medium) {
+        height: auto;
+        .header {
+            padding: 0 7rem;
+        }
+
+        .body {
+            padding: 0 2rem;
+            margin-top: 5rem;
+            align-items: flex-start;
+
+            .left-side {
+                h2 {
+                    font-size: 40px;
+                }
+
+                h1 {
+                    font-size: 80px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+
+                .button-wrapper {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .right-side {
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint($small) {
+        margin-bottom: 5rem;
+        .header {
+            padding: 0 1rem;
+
+            a {
+                i {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .body {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 7rem;
+
+            .left-side {
+                .button-wrapper {
+                    a {
+                        padding: 0.7rem 1.5rem;
+                    }
+                }
+            }
+
+            .right-side {
+                height: 200px !important;
+                display: contents;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint($x-small) {
+        height: auto;
+        margin-bottom: 2rem;
+        
+        .header {
+            padding: 0 0.7rem;
+            a {
+                i {
+                    margin-left: 0.5rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        
+        .body {
+            margin-top: 2rem;
+
+            .left-side {
+                h2 {
+                    font-size: 20px;
+                    margin-top: 1rem;
+                }
+
+                h1 {
+                    font-size: 40px;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .button-wrapper {
+                    margin-top: 0.6rem;
+
+                    a {
+                        padding: 0.5rem 1rem;
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .right-side {
+                img {
+                    z-index: -2;
+                }
             }
         }
     }
