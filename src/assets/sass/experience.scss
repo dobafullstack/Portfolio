@@ -2,19 +2,47 @@
     .experience {
         padding: 0 10rem;
 
+        @include breakpoint($small) {
+            padding: 0 3rem;
+        }
+
+        @include breakpoint($x-small) {
+            height: 320px !important;
+        }
         h1 {
             text-align: center;
             font-size: 60px;
             font-family: $second-font;
             font-weight: bold;
+
+            @include breakpoint($large) {
+                margin-bottom: 5rem;
+            }
+
+            @include breakpoint($small) {
+                font-size: 40px;
+                margin-bottom: 3rem;
+            }
+            @include breakpoint($x-small) {
+                font-size: 25px;
+                margin-bottom: 2rem;
+            }
         }
 
         .item-head {
             display: flex;
             align-items: center;
 
+            @include breakpoint($small) {
+                margin-bottom: 3rem;
+            }
+
             .circle {
                 margin-right: 1rem;
+
+                @include breakpoint($x-small) {
+                    display: none;
+                }
             }
 
             p {
@@ -22,6 +50,14 @@
                 font-weight: bold;
                 color: $third-color;
                 font-size: 35px;
+
+                @include breakpoint($small) {
+                    font-size: 25px;
+                }
+
+                @include breakpoint($x-small) {
+                    font-size: 20px;
+                }
             }
         }
     }

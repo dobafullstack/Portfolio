@@ -1,17 +1,47 @@
 @mixin education {
     .education {
+        @include breakpoint($x-small){
+            height: 320px !important;
+        }
+
+
         h1 {
             text-align: center;
             font-size: 60px;
             font-family: $second-font;
             font-weight: bold;
+
+            @include breakpoint($large) {
+                margin-bottom: 5rem;
+            }
+            @include breakpoint($small) {
+                font-size: 40px;
+                margin-bottom: 3rem;
+            }
+            @include breakpoint($x-small) {
+                font-size: 25px;
+                margin-bottom: 2rem;
+            }
         }
 
         .item-wrapper {
             padding-left: 10rem;
             padding-right: 10rem;
 
+            @include breakpoint($small) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+            @include breakpoint($x-small) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
             .item {
+                @include breakpoint($small) {
+                    margin-bottom: 3rem;
+                }
+
                 .head-wrapper {
                     display: flex;
                     align-items: center;
@@ -23,6 +53,10 @@
 
                         .circle {
                             margin-right: 1rem;
+
+                            @include breakpoint($x-small) {
+                                display: none;
+                            }
                         }
 
                         p {
@@ -30,6 +64,13 @@
                             font-weight: bold;
                             color: $third-color;
                             font-size: 35px;
+
+                            @include breakpoint($small) {
+                                font-size: 30px;
+                            }
+                            @include breakpoint($x-small) {
+                                font-size: 20px;
+                            }
                         }
                     }
 
@@ -40,6 +81,11 @@
                         border-radius: 100px;
                         font-weight: bold;
                         font-family: $second-font;
+
+                        @include breakpoint($x-small) {
+                            font-size: 0.9rem;
+                            padding: 0.2rem 0.5rem;
+                        }
                     }
                 }
 
@@ -51,6 +97,14 @@
                     font-family: $second-font;
                     font-weight: 300;
                     max-width: 600px;
+
+                    @include breakpoint($small) {
+                        font-size: 25px;
+                    }
+                    @include breakpoint($x-small) {
+                        font-size: 15px;
+                        margin-left: calc(1rem);
+                    }
                 }
             }
         }

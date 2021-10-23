@@ -47,3 +47,66 @@
         }
     }
 }
+
+.resume-wrapper {
+    @include breakpoint($large) {
+        padding: 0px 11.5rem;
+
+        .resume {
+            height: calc(1080px - 121px) !important;
+
+            .right-side {
+                .resume-item {
+                    height: 960px;
+                }
+            }
+        }
+    }
+    @include breakpoint($medium) {
+        padding: 0px 3.5rem;
+
+        .resume {
+            height: calc(1024px - 121px) !important;
+            flex-direction: column;
+
+            .right-side {
+                box-shadow: -1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+                margin-top: 1rem;
+                border-radius: 3rem;
+
+                .resume-item {
+                    height: 960px;
+                }
+            }
+        }
+    }
+    @include breakpoint($medium) {
+        padding: 0px 3.5rem;
+
+        .resume {
+            height: calc(768px - 121px) !important;
+
+            .right-side {
+                padding-top: 2rem;
+                .resume-item {
+                    height: calc(768px - 121px);
+                }
+            }
+        }
+    }
+    @include breakpoint($x-small) {
+        padding: 0px 1.5rem;
+
+        .resume {
+            height: 450px !important;
+
+            .right-side {
+                overflow-x: hidden;
+
+                .resume-item {
+                    // width: 327px !important;
+                }
+            }
+        }
+    }
+}

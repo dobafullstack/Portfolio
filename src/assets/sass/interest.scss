@@ -2,11 +2,33 @@
     .interest {
         padding: 0 10rem;
 
+        @include breakpoint($large) {
+            padding-top: 10rem;
+        }
+
+        @include breakpoint($medium) {
+            height: 865px !important;
+        }
+        
+        @include breakpoint($small) {
+            padding: 2rem 3rem;
+            height: 468px !important;
+        }
+
         .interest-item {
             margin-bottom: 5rem;
+
+            @include breakpoint($small) {
+                     margin-bottom: 2rem;   
+                    }
+
             .header {
                 .circle {
                     margin-right: 1rem;
+
+                    @include breakpoint($x-small){
+                        display: none;
+                    }
                 }
 
                 span {
@@ -14,6 +36,13 @@
                     font-weight: bold;
                     color: $third-color;
                     font-size: 35px;
+
+                    @include breakpoint($small) {
+                        font-size: 25px;
+                    }
+                    @include breakpoint($x-small) {
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -22,6 +51,14 @@
                 font-size: 1.5rem;
                 font-family: $second-font;
                 margin-left: calc(20px + 1rem);
+
+                @include breakpoint($small) {
+                    font-size: 1.2rem;
+                }
+                @include breakpoint($small) {
+                    margin-left: 0.5rem;
+                    font-size: 1rem;
+                }
             }
         }
     }

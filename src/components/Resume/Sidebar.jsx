@@ -10,7 +10,12 @@ export const Sidebar = ({ onScroll, selected }) => {
                     className={`item ${
                         selected === "education" ? "active" : null
                     }`}>
-                    <Icon education />
+                    <Icon
+                        onClick={() => {
+                            onScroll(0);
+                        }}
+                        education
+                    />
                     <p
                         onClick={() => {
                             onScroll(0);
@@ -22,7 +27,12 @@ export const Sidebar = ({ onScroll, selected }) => {
                     className={`item ${
                         selected === "experience" ? "active" : null
                     }`}>
-                    <Icon history />
+                    <Icon
+                        onClick={() => {
+                            onScroll(950);
+                        }}
+                        history
+                    />
                     <p
                         onClick={() => {
                             onScroll(950);
@@ -34,7 +44,12 @@ export const Sidebar = ({ onScroll, selected }) => {
                     className={`item ${
                         selected === "skills" ? "active" : null
                     }`}>
-                    <Icon programing />
+                    <Icon
+                        onClick={() => {
+                            onScroll(1900);
+                        }}
+                        programing
+                    />
                     <p
                         onClick={() => {
                             onScroll(1900);
@@ -46,7 +61,12 @@ export const Sidebar = ({ onScroll, selected }) => {
                     className={`item ${
                         selected === "projects" ? "active" : null
                     }`}>
-                    <Icon project />
+                    <Icon
+                        onClick={() => {
+                            onScroll(2850);
+                        }}
+                        project
+                    />
                     <p
                         onClick={() => {
                             onScroll(2850);
@@ -58,7 +78,12 @@ export const Sidebar = ({ onScroll, selected }) => {
                     className={`item ${
                         selected === "interest" ? "active" : null
                     }`}>
-                    <Icon interest />
+                    <Icon
+                        onClick={() => {
+                            onScroll(4000);
+                        }}
+                        interest
+                    />
                     <p
                         onClick={() => {
                             onScroll(4000);

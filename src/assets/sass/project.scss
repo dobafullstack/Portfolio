@@ -2,8 +2,17 @@
     .project {
         padding: 0 10rem;
 
+        @include breakpoint($small) {
+            padding: 0 3rem;
+        }
+
         .project-item {
             margin-bottom: 5rem;
+
+            @include breakpoint($small) {
+                margin-bottom: 1rem;
+            }
+
             .header {
                 display: flex;
                 align-items: center;
@@ -11,6 +20,10 @@
 
                 .circle {
                     margin-right: 1rem;
+
+                    @include breakpoint($x-small){
+                        display: none;
+                    }
                 }
 
                 span {
@@ -18,6 +31,13 @@
                     font-weight: bold;
                     color: $third-color;
                     font-size: 35px;
+
+                    @include breakpoint($small) {
+                        font-size: 25px;
+                    }
+                    @include breakpoint($x-small) {
+                        font-size: 20px;
+                    }
                 }
 
                 .time {
@@ -27,23 +47,49 @@
                     border-radius: 100px;
                     font-weight: bold;
                     font-family: $second-font;
+
+                    @include breakpoint($small) {
+                        padding: 0.3rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+                    @include breakpoint($x-small) {
+                        display: none;
+                    }
                 }
             }
 
             p {
                 margin: 0;
                 margin-left: calc(20px + 1rem);
+
+                @include breakpoint($x-small){
+                    margin-left: 0.5rem;
+                }
             }
 
             .sub-title {
                 font-family: $second-font;
                 font-weight: bold;
                 font-size: 1.5rem;
+
+                @include breakpoint($small) {
+                    font-size: 1.2rem;
+                }
+                @include breakpoint($x-small) {
+                    font-size: 1rem;
+                }
             }
 
             .content {
                 @include text-sub;
                 font-size: 1.2rem;
+
+                @include breakpoint($small) {
+                    font-size: 1rem;
+                }
+                @include breakpoint($x-small) {
+                    font-size: 0.8rem;
+                }
             }
         }
     }

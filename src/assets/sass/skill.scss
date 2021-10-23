@@ -2,38 +2,97 @@
     .skill {
         padding: 0 10rem;
 
-        .skill-item {
+        @include breakpoint($large) {
+            padding-left: 5rem;
+            padding-right: 0rem;
+        }
+
+        @include breakpoint($medium) {
+            padding-left: 3rem;
+        }
+
+        @include breakpoint($x-small){
+            height: auto !important;
             margin-bottom: 5rem;
-            .header {
-                display: flex;
-                align-items: center;
+        }
 
-                .circle {
-                    margin-right: 1rem;
-                }
+        .skill-item-wrapper {
+            gap: 10rem;
 
-                span {
-                    font-family: $second-font;
-                    font-weight: bold;
-                    color: $third-color;
-                    font-size: 35px;
-                }
+            @include breakpoint($large) {
+                gap: 2rem;
+            }
+            @include breakpoint($small) {
+                gap: 5rem;
+            }
+            @include breakpoint($x-small) {
+                gap: 1rem;
+                flex-direction: column;
             }
 
-            .process {
-                width: 400px;
-                height: 15px;
-                margin-top: 1rem;
-                margin-left: calc(20px + 1rem);
-                display: flex;
-                box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+            .skill-item {
+                margin-bottom: 5rem;
 
-                .percent {
-                    background-color: $primary-color;
+                @include breakpoint($small){
+                    margin-bottom: 1rem;
                 }
 
-                .rest {
-                    background-color: $third-color;
+                .header {
+                    display: flex;
+                    align-items: center;
+
+                    .circle {
+                        margin-right: 1rem;
+
+                        @include breakpoint($x-small){
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        font-family: $second-font;
+                        font-weight: bold;
+                        color: $third-color;
+                        font-size: 35px;
+
+                        @include breakpoint($large) {
+                            font-size: 26px;
+                        }
+                        @include breakpoint($medium) {
+                            font-size: 20px;
+                        }
+                        @include breakpoint($x-small) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .process {
+                    width: 400px;
+                    height: 15px;
+                    margin-top: 1rem;
+                    margin-left: calc(20px + 1rem);
+                    display: flex;
+                    box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+
+                    @include breakpoint($medium) {
+                        width: 350px;
+                    }
+                    @include breakpoint($small) {
+                        width: 200px;
+                    }
+                    @include breakpoint($x-small) {
+                        width: 245px;
+                        margin-left: 0;
+                    }
+
+                    .percent {
+                        background-color: $primary-color;
+                    }
+
+                    .rest {
+                        background-color: $third-color;
+                    }
                 }
             }
         }
