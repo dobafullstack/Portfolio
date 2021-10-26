@@ -67,15 +67,15 @@ export default function Contact() {
                 <h1>Contact me</h1>
 
                 <div className='contact-item'>
-                    <Icon user />
+                    <Icon user="true" />
                     <p>Nguyễn Duy Anh</p>
                 </div>
                 <div className='contact-item'>
-                    <Icon email />
+                    <Icon email="true" />
                     <p>dobadov3@gmail.com</p>
                 </div>
                 <div className='contact-item'>
-                    <Icon location />
+                    <Icon location="true" />
                     <p>
                         11G, 22st, Binh Hung Hoa A, Binh Tan district, Ho Chi
                         Minh City

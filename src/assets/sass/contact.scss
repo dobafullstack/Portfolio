@@ -7,6 +7,9 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint($x-medium) {
+        height: 70vh;
+    }
     @include breakpoint($medium) {
         height: 1050px;
     }
@@ -34,6 +37,13 @@
             top: -240px;
             width: 60%;
             height: 80%;
+        }
+        @include breakpoint($x-medium) {
+            transform: rotate(45deg);
+            right: -160px;
+            top: -440px;
+            width: 62%;
+            height: 140%;
         }
         @include breakpoint($medium) {
             transform: rotate(45deg);
@@ -63,6 +73,10 @@
 
         @include breakpoint($large) {
             right: 17%;
+            top: 7%;
+        }
+        @include breakpoint($x-medium) {
+            right: 12%;
             top: 7%;
         }
         @include breakpoint($medium) {
@@ -153,6 +167,9 @@
         top: 50%;
         transform: translateY(-50%);
 
+        @include breakpoint($x-medium) {
+            top: 60%;
+        }
         @include breakpoint($medium) {
             left: 16%;
             top: 72%;
@@ -167,6 +184,10 @@
             font-size: 100px;
             margin-bottom: 5rem;
 
+            @include breakpoint($x-medium) {
+                margin-bottom: 2rem;
+                font-size: 90px;
+            }
             @include breakpoint($medium) {
                 font-size: 60px;
                 margin-bottom: 3rem;

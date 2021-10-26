@@ -15,7 +15,7 @@ export function Icon(props) {
         location,
     } = props;
 
-    switch (true) {
+    switch ("true") {
         case facebook:
             icon = "fab fa-facebook-square";
             break;

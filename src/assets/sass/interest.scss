@@ -6,6 +6,9 @@
             padding-top: 10rem;
         }
 
+        @include breakpoint($x-medium) {
+            padding: 0 3rem;
+        }
         @include breakpoint($medium) {
             height: 865px !important;
         }

@@ -1,9 +1,8 @@
 @mixin education {
     .education {
-        @include breakpoint($x-small){
+        @include breakpoint($x-small) {
             height: 320px !important;
         }
-
 
         h1 {
             text-align: center;
@@ -28,6 +27,10 @@
             padding-left: 10rem;
             padding-right: 10rem;
 
+            @include breakpoint($x-medium) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
             @include breakpoint($small) {
                 padding-left: 3rem;
                 padding-right: 3rem;

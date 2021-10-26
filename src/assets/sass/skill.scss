@@ -7,6 +7,9 @@
             padding-right: 0rem;
         }
 
+        @include breakpoint($x-medium) {
+            padding-left: 3rem;
+        }
         @include breakpoint($medium) {
             padding-left: 3rem;
         }
@@ -33,6 +36,9 @@
             .skill-item {
                 margin-bottom: 5rem;
 
+                @include breakpoint($x-medium){
+                    margin-bottom: 3rem;
+                }
                 @include breakpoint($small){
                     margin-bottom: 1rem;
                 }
@@ -75,6 +81,9 @@
                     display: flex;
                     box-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
 
+                    @include breakpoint($x-medium) {
+                        width: 250px;
+                    }
                     @include breakpoint($medium) {
                         width: 350px;
                     }

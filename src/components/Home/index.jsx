@@ -10,10 +10,10 @@ const Home = () => {
         <div className='home-wrapper' id="home">
             <div className='header'>
                 <a href={facebookLink} target='_blank' rel="noreferrer">
-                    <Icon facebook />
+                    <Icon facebook="true" />
                 </a>
                 <a href={instagramLink} target='_blank' rel="noreferrer">
-                    <Icon instagram />
+                    <Icon instagram="true" />
                 </a>
             </div>
             <div className='body'>

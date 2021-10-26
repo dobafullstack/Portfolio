@@ -14,7 +14,7 @@ export const Sidebar = ({ onScroll, selected }) => {
                         onClick={() => {
                             onScroll(0);
                         }}
-                        education
+                        education="true"
                     />
                     <p
                         onClick={() => {
@@ -31,7 +31,7 @@ export const Sidebar = ({ onScroll, selected }) => {
                         onClick={() => {
                             onScroll(950);
                         }}
-                        history
+                        history="true"
                     />
                     <p
                         onClick={() => {
@@ -48,7 +48,7 @@ export const Sidebar = ({ onScroll, selected }) => {
                         onClick={() => {
                             onScroll(1900);
                         }}
-                        programing
+                        programing="true"
                     />
                     <p
                         onClick={() => {
@@ -65,7 +65,7 @@ export const Sidebar = ({ onScroll, selected }) => {
                         onClick={() => {
                             onScroll(2850);
                         }}
-                        project
+                        project="true"
                     />
                     <p
                         onClick={() => {
@@ -82,7 +82,7 @@ export const Sidebar = ({ onScroll, selected }) => {
                         onClick={() => {
                             onScroll(4000);
                         }}
-                        interest
+                        interest="true"
                     />
                     <p
                         onClick={() => {

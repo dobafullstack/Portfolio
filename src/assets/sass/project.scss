@@ -2,6 +2,9 @@
     .project {
         padding: 0 10rem;
 
+        @include breakpoint($x-medium) {
+            padding: 0 3rem;
+        }
         @include breakpoint($small) {
             padding: 0 3rem;
         }

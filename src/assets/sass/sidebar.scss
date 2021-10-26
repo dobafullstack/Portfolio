@@ -25,6 +25,9 @@
                 border-radius: 3rem;
                 background-color: none;
             }
+            @include breakpoint($x-medium) {
+                width: 80px;
+            }
             @include breakpoint($x-small) {
                 width: auto;
                 height: 50px;
@@ -46,6 +49,10 @@
                 gap: 8rem;
             }
 
+            @include breakpoint($x-medium) {
+                left: calc(80px / 2);
+            }
+
             @include breakpoint($small) {
                 transform: translate(-46%, -50%);
                 gap: 5rem;
@@ -63,7 +70,7 @@
                     font-size: 2rem;
                     transform: translateX(-50%);
 
-                    @include breakpoint($x-small){
+                    @include breakpoint($x-small) {
                         font-size: 1.4rem;
                     }
                 }
@@ -80,6 +87,12 @@
                     @include breakpoint($large) {
                         width: 330px !important;
                         padding: 1rem 1rem 1rem 4rem;
+                    }
+
+                    @include breakpoint($x-medium) {
+                        padding: 0.7rem 1rem 0.7rem 2rem;
+                        font-size: 1.3rem;
+                        width: 245px !important;
                     }
 
                     @include breakpoint($medium) {
